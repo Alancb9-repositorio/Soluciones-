@@ -42,24 +42,3 @@ print("-----------------------------------------")
 reportaTrending2(tendencias, fechas)
 print("-----------------------------------------")
 reportaTrending3(tendencias, '08-25-2016', '08-28-2016')
-
-#names = {"timothy": 17,"jane":12,"john":21,"peter":25}
-lista_nombres = list(names.keys())  #lista_nombres = ["timothy", "jane", "john", "peter"]
-lista_nombres.sort() #["jane", "john", "peter", "timothy"]
-for datos in range(len(lista_nombres)): #(0,1,2,3) 1ra datos = 0 2da datos = 1 3ra datos = 2 4ta datos = 3
-    pos_nombres = lista_nombres[datos]  #pos_nombres = lista_nombres[3] = "timothy"
-    pos_edades=  names[posicion_nombres]    #pos_edades = name["john"] = 17
-    print(pos_name,pos_edad) #jane 12
-                             #jhon 12
-                             #peter 25
-                             #timothy 17
-names = {"timothy": 17,"jane":12,"john":21,"peter":25}
-n = {}
-for clave, valor in names.items():
-    n[valor] = clave
-print(n)
-lista_edades = list(n.keys())
-lista_edades.sort()
-for edad in lista_edades:
-    nombre = n[edad]
-    print("{} tiene una edad de: {}".format(nombre, edad))

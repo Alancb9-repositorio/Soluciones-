@@ -50,7 +50,7 @@ datos={"Visitantes": ["Juan","Pietro","Michelle","Rafaello","Andres","Corinna","
        "fecha_entrada":["26-06-2019","02-10-2019","06-10-2019","18-05-2020","15-10-2020","06-10-2019","01-10-2019","02-11-2019","01-10-2019"], 
        "Paises": ["Italia","Francia", "Argentina", "Italia", "Francia", "Italia", "Alemania", "España","Japon"]}
 continentes={"America":["Estados Unidos","Argentina","Ecuador","Peru"],
-             "Europa": ["Portugal","Francia","Italia","Alemania"],
+             "Europa": ["Portugal","Francia","Italia","Alemania", "España"],
              "Asia":["India","China","Japon"]}
 respuesta = num_visitantes(datos,"octubre", "2019")
 print(respuesta)

@@ -25,8 +25,8 @@ visitados= ["maria2|www.facebook.com|160","xavi7|www.eluniverso.com|50","jose15|
             "jose15|www.eluniverso.com|30"]
 
 trabajo= ["www.espol.edu.ec","www.inec.gob.ec","www.sri.gob.ec"]
-
-#d = {"nombre_empleado":[hora sitios de trabajo, hora sitios que no son trabajo]}
+#Funcion 1
+#d = {"nombre_empleado":[hora sitios de trabajo, hora sitios que no son trabajo]...}
 def calcula_tiempo(visitados, trabajo):
     d = {} #{"maria2": [0,160]}
     for informacion in visitados: #1 informacion = "maria2|www.facebook.com|160"
@@ -42,7 +42,7 @@ def calcula_tiempo(visitados, trabajo):
     return d
 tiempo_calculado = calcula_tiempo(visitados, trabajo)
 print(tiempo_calculado)
-
+#Funcion 2, primera forma de hacerlo
 def empleado_trabajo1(visitados, trabajo):
     d = calcula_tiempo(visitados, trabajo) #d = {'maria2': [50, 210], 'xavi7': [30, 50], 'jose15': [150, 30]}
     nombre_empleado = "" #nombre_empleado = ""
@@ -52,7 +52,7 @@ def empleado_trabajo1(visitados, trabajo):
             horas_no_trabajo = valor[1] #horas_no_trabajo = 210
             nombre_empleado = clave #nombre_empleado = "maria2"
     return nombre_empleado, horas_no_trabajo
-
+#Funcion 2, segunda forma de hacerlo
 def empleado_trabajo2(visitados, trabajo):
     d = calcula_tiempo(visitados, trabajo)
     nombre_empleado = []

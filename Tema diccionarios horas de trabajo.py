@@ -1,6 +1,6 @@
 """
 Una empresa registra los servicios de internet visitados por los empleados y los minutos de navegacion en una lista semejante 
-a la mostrada. Cada registro se almacena usando una cadena con el formato: "empleado|sitio visitado|minutos":
+a la mostrada. Cada registro se almacena usando una cadena con el formato: "empleado|sitio visitado|horas":
 """
 #Escriba las siguientes funciones:
 """

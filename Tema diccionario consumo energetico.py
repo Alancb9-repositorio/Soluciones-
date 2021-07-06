@@ -54,7 +54,13 @@ def total_plantas_ciudad(consumo_energia, ciudad):
     return d
 
 #Literal3
-
+def megavatios_hora(consumo_energia, informacion):
+    suma = 0
+    for planta, dicionario_ciudades in consumo_energia.items():
+        for ciudad in dicionario_ciudades.keys():
+            if ciudad in informacion["costa"]:
+                suma += total_anual(consumo_energia, planta, ciudad)
+    return suma   
 
 resultado = total_anual(consumo_energia, 'Coca Codo Sinclair', 'Guayaquil')
 print(resultado)
@@ -62,3 +68,5 @@ print(resultado)
 resultado2 = total_plantas_ciudad(consumo_energia, 'Quito')
 print(resultado2)
 
+resultado3 = megavatios_hora(consumo_energia, informacion)
+print(resultado3)

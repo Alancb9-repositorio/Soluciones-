@@ -1,10 +1,11 @@
-#names = {"timothy": 17,"jane":12,"john":21,"peter":25}
+"""Muestre el nombre y la edad desde el mas joven hasta el menos joven"""
+names = {"timothy": 17,"jane":12,"john":21,"peter":25}
 lista_nombres = list(names.keys())  #lista_nombres = ["timothy", "jane", "john", "peter"]
 lista_nombres.sort() #["jane", "john", "peter", "timothy"]
 for datos in range(len(lista_nombres)): #(0,1,2,3) 1ra datos = 0 2da datos = 1 3ra datos = 2 4ta datos = 3
-    pos_nombres = lista_nombres[datos]  #pos_nombres = lista_nombres[3] = "timothy"
-    pos_edades=  names[posicion_nombres]    #pos_edades = name["john"] = 17
-    print(pos_name,pos_edad) #jane 12
+    nombre = lista_nombres[datos]  #pos_nombres = lista_nombres[3] = "timothy"
+    edad=  names[nombre]    #pos_edades = name["john"] = 17
+    print(nombre,edad) #jane 12
                              #jhon 12
                              #peter 25
                              #timothy 17

@@ -42,7 +42,6 @@ def decoradio(dic, cadena):
     lista = cadena.split(" ")
     for palabra in lista:
         significado = d[palabra]
-        print(significado)
         traduccion += significado
     return traduccion
 

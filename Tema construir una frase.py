@@ -11,5 +11,28 @@ Ejemplo: palabra1, palabra2
 ● El punto debe estar pegado a la palabra de la izquierda y seguido de un salto de línea. Ejemplo: palabra1.
 ● No elimine términos de la lista T."""
 T = ["hola", "la", ",", "casa", "por", "computadora", "mesa", ".", ".", "-","cocina", "el", "calle", "mama", "-",
-    "telefono", "la", "lo", "en", "en", "lapiz","internet",",", "iglesia", "pies", "ciudad", "ecuadoer", "de", ".", "universidad", "espol", "los", "las"
+    "telefono", "la", "lo", "en", "en", "lapiz","internet",",", "iglesia", "pies", "ciudad", "ecuadoer", "de", ".", "universidad", "espol", "los", "las",
     "espacio", "gato", "maria", "alan", "kevin", "-", "."]
+from random import randint
+frase = []
+for i in range(73):
+    if i == 0:
+        indice_termino = randint(0, len(T) - 1)
+        while T[indice_termino] == "." or T[indice_termino] == "," or T[indice_termino] == "-":
+            indice_termino = randint(0, len(T) - 1)
+        frase.append(T[indice_termino])
+    else:
+        indice_termino = randint(0, len(T) - 1)
+        while (frase[-1] == ".\n" or frase[-1] == ", " or frase[-1] == "-") and (T[indice_termino] == "." or T[indice_termino] == "," or T[indice_termino] == "-"):
+            indice_termino = randint(0, len(T) - 1)
+        if (frase[-1] != ".\n" and frase[-1] != ", " and frase[-1] != "-") and (T[indice_termino] != "." and T[indice_termino] != "," and T[indice_termino] != "-"):
+            frase.append(" " + T[indice_termino])
+        else:
+            if (frase[-1] != ".\n" and frase[-1] != ", " and frase[-1] != "-") and T[indice_termino] == ",":
+                frase.append(T[indice_termino] + " ")
+            elif (frase[-1] != ".\n" and frase[-1] != ", " and frase[-1] != "-") and T[indice_termino] == ".":
+                frase.append(T[indice_termino] + "\n")
+            else:
+                frase.append(T[indice_termino])
+frase_unida = "".join(frase)
+print(frase_unida)

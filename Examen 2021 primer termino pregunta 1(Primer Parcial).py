@@ -38,10 +38,9 @@ def mas_caro(d_categorias, d_precios, categoria):
         if precio > precio_mayor and categoria == d_categorias[articulo]:
             articulo_tienda_mayor = articulo
             precio_mayor = precio
-    categoria_mayor = articulo_tienda_mayor
-    return categoria_mayor
-respuesta1 = mas_caro(d_categorias, d_precios, "Muñecas")
-print(respuesta1)
+    return articulo_tienda_mayor, precio_mayor
+respuesta1, precio = mas_caro(d_categorias, d_precios, "Muñecas")
+print(respuesta1, precio)
 
 """2.[10 puntos] total_por_categoria(d_categorias, d_precios,
 ListaCompras) que recibe los diccionarios de categorías y

@@ -35,7 +35,7 @@ for numero in l_numeros:
         cont += 1
 print(cont)
 
-
+#Solucion
 l_numeros = [5, 4, 7, 0, 1]
 cont = 0
 while l_numeros[cont] != 0:

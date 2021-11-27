@@ -3,18 +3,25 @@
 """Asuma que este codigo esta completo y no tiene errores de logica o sintaxis.
 Para resolver este tema, no utilice ningun editor de python o herramienta de programacion
 Que imprime el siguiente codigo?:"""
+def filtrar_numeros(numeros, n): #numeros = (0,1,2,3,4,5,6,7,8,9), n = 4
+    resultado = []  #resultado = [1,2,3,5,6,7,9]
+    for numero in numeros:  #numero =  9 , (0,1,2,3,4,5,6,7,8,9)
+        if numero % n != 0: #1 != 0:
+            resultado.append(numero)    #resultado.append(9)
+    return resultado    #resultado = [1,2,3,5,6,7,9]
 
-def filtrar_numeros(numeros, n):
-    resultado = []
-    for numero in numeros:
-        if numero % n != 0:
-            resultado.append(numero)
-    return resultado
-
-i = 0
-for v in filtrar_numeros(range(0, 10), 4):
-    print(i, v)
+i = 0   #i = 6
+for v in filtrar_numeros(range(0, 10), 4):  #v =  9 , [1,2,3,5,6,7,9]
+    print(i, v) #6 9
     i = i + 1
+
+# 0 1
+# 1 2
+# 2 3
+# 3 5
+# 4 6
+# 5 7
+# 6 9
 
 #Tema 2 (25 pts)
 """Convierta el siguiente codigo de python que cuenta cuantos elementos hay en la lista
@@ -134,6 +141,7 @@ while destino != "terminar" and destino != "no va mas":
         print("DATO ERRONEO")
         peso = input("Estimado usuario por favor ingrese nuevamente un peso: ")
     total_a_pagar += valor_a_pagar
+print("[!] El total a pagar es: ${}".format(total_a_pagar))
 
 
 

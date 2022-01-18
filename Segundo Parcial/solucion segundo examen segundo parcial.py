@@ -20,10 +20,14 @@ def cargar_info(nom_file, mes):
 
 """Pregunta 2"""
 def total_inmunizados(nom_file, mes_inicial, mes_final):
-    poblacion, vacunas, ciudades, matriz = cargar_info(nom_file, mes_inicial)
-    for numero_mes in range(mes_inicial + 1, mes_final + 1):
-        poblacion, vacunas, ciudades, matriz_info = cargar_info(nom_file, numero_mes)
-        matriz += matriz_info
+    f = open(nom_file)
+    vacunas = f.readline().strip().split(":")[1].split(",")
+    ciudades = f.readline().strip().split(":")[1].split(",")
+    matriz = np.zeros((len(vacunas), len(ciudades)), dtype = int)
+    f.close()
+    for numero_mes in range(mes_inicial, mes_final + 1): #(1,2,3,4) numero_mes = 2
+        poblacion, vacunas, ciudades, matriz_info = cargar_info(nom_file, numero_mes)   #cargar_info(nom_file, 2)
+        matriz = matriz + matriz_info
     return matriz
 
 """Pregunta 3"""
@@ -31,7 +35,7 @@ def mas_inmunizados(nom_file, mes, Num):
     poblacion, vacunas, ciudades, matriz = cargar_info(nom_file, mes)
     top_ciudades = []
     for indice, elemento in enumerate(vacunas):
-        top_ciudades.append(np.array(ciudades[np.argsort(matriz[indice, :])[::-1]][:Num + 1]))
+        top_ciudades.append(np.array(ciudades[np.argsort(matriz[indice, :])[::-1]][:Num]))
     return tuple(top_ciudades)
 
 """Pregunta 4"""

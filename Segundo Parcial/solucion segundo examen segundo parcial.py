@@ -73,13 +73,13 @@ total = total_inmunizados("vacunacionCovid.csv", 1, 8)
 f = open("reporte.txt", "w")
 poblacion, vacunas, ciudades, matriz = cargar_info("vacunacionCovid.csv", 1)
 
-# for region in lista_regiones:
-#     f.write(region + "\n")
-#     f.write("============\n")
-#     ciudades_region = dictRegiones[region]
-#     datos_cansino = total[np.where(ciudades == "Cansino")] / poblacion
-#     f.write("Ciudad con mayor porcentaje de inmunizados: " + ciudades[np.argmax(datos_cansino) + "\n"]
-#
+for region in lista_regiones:
+    f.write(region + "\n")
+    f.write("============\n")
+    ciudades_region = dictRegiones[region]
+    datos_cansino = total[np.where(ciudades == "Cansino")] / poblacion
+    f.write("Ciudad con mayor porcentaje de inmunizados: " + ciudades[np.argmax(datos_cansino) + "\n"]
+
 
 
 

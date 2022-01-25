@@ -1,0 +1,1 @@
+python Segundo_Parcial/Taller_archivos/Taller_archivos.py

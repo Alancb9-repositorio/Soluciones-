@@ -1,1 +1,1 @@
-python Segundo_Parcial/Taller_archivos/Taller_archivos.py
+python Segundo_Parcial/Examen_2021_2T/main.py

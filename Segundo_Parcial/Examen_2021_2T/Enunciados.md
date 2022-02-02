@@ -18,7 +18,7 @@ Puede asumir que todas las ciudades han visto las mismas peliculas que su compan
 
 Adicionalmente asuma que tiene un diccionario con TODAS las peliculas filmadas en la historia del mundo(no todas las peliculas son distibuidas por su compañia) donde la clave es el nombre de la pelicula y el valor es una lista con los actores , actrices, director y el estudio de la pelicula. el estudio siempre sera el ultimo valor en la lista.
 
-Ejempli del diccionario de peliculas de toda la historia:
+Ejemplo del diccionario de peliculas de toda la historia:
 
 dic_movies = {
     "Rapido y Furioso 9": ["Paul Walker", "Vin diesel", "Dwayne Johnson",...,"Universal"],

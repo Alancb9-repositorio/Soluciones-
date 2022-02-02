@@ -20,6 +20,7 @@ def crearMatrizDta(dic_peliculas_ciudades):
     for lista_peliculas in dic_peliculas_ciudades.values():
         vector_peliculas += lista_peliculas
     vector_peliculas = np.array(list(set(vector_peliculas)))
+    #vector_peliculas = np.unique(np.array(vector_peliculas))
     matriz = np.random.randint(4, 18, (vector_ciudades.size, vector_peliculas.size))
     return vector_ciudades, vector_peliculas, matriz
 #TEMA 2
@@ -31,7 +32,7 @@ def obtenerTop_n(matriz, v_names_filas, v_names_cols, dic_movies, n, estudio):
         if lista_info[-1] == estudio:
             top_n_peliculas.append(pelicula)
             top_n_valores.append(vector_total_semanas[np.sum(np.where(v_names_cols == pelicula))])
-    return np.array(top_n_peliculas)[np.argsort(np.array(top_n_valores))[::-1][:n]]
+    return list(np.array(top_n_peliculas)[np.argsort(np.array(top_n_valores))[::-1][:n]])
 #TEMA 3
 #Literal 1
 ciudades, peliculas, matriz = crearMatrizDta(dic_peliculas_ciudades)

@@ -108,7 +108,7 @@ formato de fecha que el archivo.
 Analice el código fuente de los programas que se muestran a continuación. Seleccione la respuesta correcta y justifique brevemente su respuesta.
 1. [3 PUNTOS]Determine la salida por pantalla del siguiente código:
 
-X = 2
+x = 2   
 y = 5
 z = x + z
 print("La suma es ,z")

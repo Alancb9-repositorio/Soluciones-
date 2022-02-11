@@ -1,1 +1,1 @@
-python Examen_de_prueba/main.py
+python main.py
